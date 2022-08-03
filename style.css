@@ -1,0 +1,567 @@
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 16px;
+    padding: 5% 10%;
+    font-weight: 400;
+    width: 100vw;
+    height: 100vh;
+}
+
+.nav-link {
+    color: hsl(219, 9%, 45%);
+}
+
+.nav-link:hover {
+    color: black;
+    height: 73px;
+    border-bottom: 5px solid hsl(26, 100%, 55%);
+    margin-bottom: -40px;
+}
+
+#cart {
+    margin-left: auto;
+    border: none;
+    background-color: white;
+}
+
+.avatar {
+    width: 5%;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+.avatar:hover {
+    border: 3px solid hsl(26, 100%, 55%);
+    border-radius: 50%;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-item-1,
+.flex-item-2 {
+    width: 50%;
+    padding: 5%;
+}
+
+.box-picture,
+.mainpic {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.box-picture {
+    cursor: zoom-in;
+}
+
+.box-thumbnail,
+.box-thumbnail2 {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    width: 108%;
+}
+
+.picthumb {
+    width: 25%;
+    cursor: pointer;
+    margin-right: 7%;
+    border: none;
+    background-color: transparent;
+}
+
+.thumbnail {
+    border-radius: 15px;
+    width: 100%;
+    border: none;
+}
+
+.selected .thumbnail {
+    opacity: 0.25;
+}
+
+.picthumb:hover .thumbnail {
+    opacity: 0.5;
+}
+
+.selected {
+    padding: 0;
+    border-radius: 20px;
+    border: 5px solid hsl(26, 100%, 55%);
+}
+
+h5 {
+    color: hsl(26, 100%, 55%);
+    margin-top: 10%;
+    font-weight: 700;
+}
+
+h1 {
+    font-weight: 700;
+    margin-bottom: 8%;
+    font-size: 50px;
+}
+
+p {
+    color: hsl(219, 9%, 45%);
+    margin-bottom: 5%;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+span {
+    color: hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%);
+    font-size: 18px;
+    margin-left: 5%;
+}
+
+h4 {
+    color: hsl(220, 14%, 75%);
+    text-decoration: line-through;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btngroup {
+    display: flex;
+    flex-direction: row;
+}
+
+#numb {
+    font-weight: 700;
+    width: 30%;
+    border: none;
+    background-color: hsl(223, 64%, 98%);
+    text-align: center;
+    height: 60px;
+}
+
+#minus {
+    width: 35%;
+    border: none;
+    background-color: hsl(223, 64%, 98%);
+    height: 60px;
+    border-radius: 10px 0 0 10px;
+    background-image: url(./images/icon-minus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#plus {
+    width: 35%;
+    border: none;
+    background-color: hsl(223, 64%, 98%);
+    height: 60px;
+    border-radius: 0 10px 10px 0;
+    background-image: url(./images/icon-plus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#plus:hover,
+#minus:hover {
+    opacity: 0.7;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    width: 40%;
+    margin-top: 8%;
+}
+
+.btncart {
+    background-color: hsl(26, 100%, 55%);
+    color: hsl(25, 100%, 94%);
+    border: none;
+    border-radius: 15px;
+    width: 60%;
+    height: 60px;
+    font-weight: 700;
+    margin-left: 5%;
+    margin-top: 8%;
+}
+
+.btncart svg {
+    margin-right: 10px;
+    fill: hsl(25, 100%, 94%);
+}
+
+.btncart:hover {
+    opacity: 0.5;
+    box-shadow: 1px 20px 20px hsl(26, 100%, 85%);
+}
+
+.modal {
+    z-index: 1;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+}
+
+.mySlides {
+    width: 40%;
+    margin-left: 30%;
+    position: relative;
+    margin-top: 2%;
+}
+
+.mySlides img {
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+    opacity: 1;
+}
+
+.box-thumbnail2 {
+    width: 100%;
+    margin-left: 30%;
+    margin-top: 3%;
+    position: relative;
+}
+
+#picthumb2 {
+    width: 8%;
+    margin-left: 20px;
+    background-color: white;
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+}
+
+.thumbnail2 {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.demo:hover .thumbnail2 {
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+}
+
+.active .thumbnail2 {
+    mix-blend-mode: multiply;
+    opacity: 0.25;
+}
+
+.active {
+    border: 3px solid hsl(26, 100%, 55%);
+    border-radius: 20px;
+}
+
+#btnclose {
+    border: none;
+    position: relative;
+    left: 68%;
+    margin-top: 8%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#btnclose svg {
+    fill: white;
+    transform: scale(1.5);
+}
+
+#btnclose:hover svg {
+    fill: hsl(26, 100%, 55%);
+}
+
+
+.prev {
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    padding: 1.5% 2%;
+    left: 28%;
+    top: 42%;
+    z-index: 100;
+
+}
+
+.prev svg,
+.next svg {
+    stroke: black;
+}
+
+.prev:hover svg,
+.next:hover svg {
+    stroke: hsl(26, 100%, 55%);
+}
+
+.next {
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    padding: 1.5% 2%;
+    left: 67%;
+    top: 42%;
+    z-index: 100;
+}
+
+.card {
+    width: 25%;
+    height: 210px;
+    position: absolute;
+    z-index: 10;
+    right: 5%;
+    top: 14%;
+    border: none;
+    box-shadow: 1px 10px 40px hsl(220, 14%, 75%);
+    display: none;
+    border-radius: 10px;
+}
+
+.card-header,
+#howmuch {
+    background-color: white;
+    color: hsl(220, 13%, 13%);
+    font-weight: 700;
+}
+
+#empty {
+    font-weight: 700;
+    color: hsl(219, 9%, 45%);
+    text-align: center;
+    margin-top: 20%;
+}
+
+#buy,
+#closemenu {
+    display: none;
+}
+
+.buy-head {
+    display: flex;
+    flex-direction: row;
+}
+
+.minipic {
+    width: 15%;
+    height: 15%;
+}
+
+.bin {
+    width: 5%;
+    height: 5%;
+    margin-top: 5%;
+    margin-left: 4%;
+    cursor: pointer;
+}
+
+.calcart {
+    display: flex;
+    flex-direction: row;
+    margin-top: -5%;
+}
+
+.buy-name {
+    margin: 0 10px;
+}
+
+#howmany {
+    background-color: white;
+    color: hsl(219, 9%, 45%);
+    margin: 0 5px;
+}
+
+.checkout {
+    background-color: hsl(26, 100%, 55%);
+    color: hsl(25, 100%, 94%);
+    width: 100%;
+    height: 60px;
+    margin-top: 3%;
+    border: none;
+    border-radius: 15px;
+    font-weight: 700;
+}
+
+.open {
+    display: block;
+}
+
+#alertcart {
+    background-color: hsl(26, 100%, 55%);
+    color: hsl(25, 100%, 94%);
+    position: absolute;
+    border-radius: 50px;
+    padding: 0 8px;
+    font-size: 1px;
+    right: 18.5%;
+    top: 8.5%;
+    z-index: 10;
+    font-weight: 700;
+    display: none;
+}
+
+#menu {
+    border: none;
+    background-color: white;
+    display: none;
+}
+
+#back {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    opacity: 0.75;
+    z-index: 10;
+    display: none;
+}
+
+@media (max-width:550px) {
+    body {
+        padding: 0;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu,
+    .btngroup,
+    .modal {
+        display: block;
+    }
+
+    .navbar-brand {
+        margin-left: 10px;
+    }
+
+    .avatar {
+        width: 8%;
+        margin-right: 3%;
+    }
+
+    hr,
+    .flex-item-1,
+    .modal-content,
+    .box-thumbnail2,
+    #btnclose {
+        display: none;
+    }
+
+    .flex-item-2,
+    .item,
+    .btncart {
+        width: 100%;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 5%;
+    }
+
+    p,
+    h4 {
+        font-size: 15px;
+    }
+
+    .price {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .price span {
+        padding: 0 5px;
+        margin-left: 20px;
+    }
+
+    .btncart {
+        margin: 5% 0;
+    }
+
+    .modal {
+        position: relative;
+        width: 100%;
+        margin-bottom: -8%;
+        margin-top: 5%;
+    }
+
+    .mySlides {
+        width: 100%;
+        margin: 0;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .mySlides img {
+        border-radius: 0;
+        margin-top: -10%;
+    }
+
+    .prev {
+        left: 4%;
+        padding: 4% 6%;
+    }
+
+    .next {
+        left: 80%;
+        padding: 4% 6%;
+    }
+
+    a {
+        font-weight: 700;
+        color: black;
+    }
+
+    #navtab {
+        margin-top: 20%;
+        margin-left: 5%;
+    }
+
+    .sidebar {
+        position: absolute;
+        z-index: 100;
+        padding-top: 5%;
+        background-color: white;
+        border: 1px solid black;
+        height: 100%;
+        width: 70%;
+        transition: ease-in-out;
+    }
+
+    .card {
+        width: 98%;
+        left: 1%;
+        top: 9%;
+        height: 250px;
+    }
+
+    .card-header {
+        height: 70px;
+        padding-top: 6%;
+    }
+
+    #alertcart {
+        top: 1%;
+        right: 17%;
+    }
+}
